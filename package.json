@@ -1,13 +1,17 @@
 {
+  "homepage": "https://codingwithmizan.github.io/react-deploy",
   "name": "rsbuild-react-ts",
   "private": true,
   "version": "1.0.0",
   "scripts": {
     "dev": "rsbuild dev --open",
     "build": "rsbuild build",
-    "preview": "rsbuild preview"
+    "preview": "rsbuild preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
+    "gh-pages": "^6.3.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
